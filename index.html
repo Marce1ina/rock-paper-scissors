@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Papier - kamień - nożyce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="data">
+            <div class="user-data">
+                <div class="name" id="user-name">User Name</div>
+                <div class="choice" id="user-choice"></div>
+            </div>
+            <div class="score">
+                <div class="user-points" id="user-points">0</div>
+                <div>:</div> 
+                <div class="comp-points" id="comp-points">0</div>
+            </div>
+            <div class="computer-data">
+                <div class="name">Computer</div>
+                <div class="choice" id="comp-choice"></div>
+            </div>
+        </div>
+        <div class="comment">
+            <p id="comment"></p>
+        </div>
+        <div class="buttons" id="buttons">
+            <div class="btn btn-purple" id="rock"><i class="fa fa-hand-rock-o"></i></div>
+            <div class="btn btn-yellow" id="paper"><i class="fa fa-hand-paper-o"></i></div>
+            <div class="btn btn-blue" id="scissors"><i class="fa fa-hand-scissors-o"></i></div>
+            <div class="btn btn-yellow btn-play" id="play-again">Play again!</div>
+        </div>
+    </div> 
+    
+    <script src="js/script.js"></script>    
+</body>
+</html>

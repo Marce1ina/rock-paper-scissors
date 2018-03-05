@@ -1,0 +1,114 @@
+$grey: #bdc3c7;
+$green: #1abc9c;
+
+body {
+    background: #34495e;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    font-family: Acme, sans-serif;
+    color: $grey;
+}
+
+.data {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    [class*=-data] {
+        margin: 0 15%;
+        font-size: 2.5em;
+        text-align: center;
+        .name {
+            text-transform: uppercase;
+            color: $green;
+            white-space: nowrap; 
+        }
+    }
+    .score {
+        display: flex;
+        justify-content: space-between;
+        background: $grey;
+        color: black;
+        font-size: 3em;
+        font-weight: 900;
+        border-radius: 5%;
+        padding: 20px;
+        border: solid black 3px;
+        min-width: 150px;
+        [class*=points] {
+            display: flex;
+        }
+    }
+
+}
+
+.comment {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    p {
+        font-size: 2em;
+        color: $green;
+    }
+}
+
+.buttons {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    .btn {
+        background-color: inherit;
+        border-radius: 5%;
+        border: 2px solid;
+        cursor: pointer;
+        margin: 4px 20px;
+        padding: 20px 40px;
+        font-family: Acme, sans-serif;
+        font-size: 7em;
+        min-width: 150px;
+        min-height: 100px;
+        transition: .4s;
+        background-position: 100% 0;
+        background-size: 600%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        &:hover {
+            color: white;
+            background-position: 0 100%;
+        }
+    }
+    .btn-purple {
+        border-color: #8e44ad;
+        color: #8e44ad;
+        background-image: linear-gradient(90deg, #8e44ad 50%, transparent 50%);
+    }
+    .btn-yellow {
+        border-color: #f1c40f;
+        color: #f1c40f;
+        background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    }
+    .btn-blue {
+        border-color: #3498db;
+        color: #3498db;
+        background-image: linear-gradient(135deg, #3498db 50%, transparent 50%);
+    }
+    .btn-play {
+        display: none;
+    }
+}
+
+
+
