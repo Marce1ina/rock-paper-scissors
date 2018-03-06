@@ -108,7 +108,7 @@ function result() {
         resultLook();
     }
     function resultLook () {
-        cpu.style.fontSize = '3.5rem';
+        winner.style.fontSize = '3.5rem';
         comment.style.fontSize = "4em";
         paperButton.style.display = "none";
         scissorsButton.style.display = "none";
