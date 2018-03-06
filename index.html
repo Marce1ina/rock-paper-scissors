@@ -2,42 +2,56 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Papier - kamień - nożyce</title>
+    <title>Paper-scissors-rock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-    <div class="container" id="start-game">
-        <div class="btn btn-yellow" id="btn-new-game">New game</div>
+    <div class="container start-game" id="start-game">
+        <div class="row">
+            <div class="btn btn-yellow col-6 col-offset-2" id="btn-new-game">New game</div>
+        </div>
+        <div class="row">
+            <div id="icons">
+                <i class="fa fa-hand-rock-o col-4 col-offset-1" id="icon1"></i>
+                <i class="fa fa-hand-paper-o col-4" id="icon2"></i>
+            </div>
+        </div>
     </div>
-    <div class="container" id="main-game">
-        <div class="data">
-            <div class="user-data">
-                <div class="name" id="user-name">User Name</div>
-                <div class="choice" id="user-choice"></div>
-            </div>
-            <div class="score">
-                <div class="user-points" id="user-points">0</div>
-                <div>:</div> 
-                <div class="comp-points" id="comp-points">0</div>
-            </div>
-            <div class="computer-data">
-                <div class="name">Computer</div>
-                <div class="choice" id="comp-choice"></div>
+    <div class="container main-game" id="main-game">
+        <div class="row">
+            <div class="data col-10">
+                <div class="user-data col-2 col-offset-1">
+                    <div class="name" id="user-name">User Name</div>
+                    <div class="choice" id="user-choice"></div>
+                </div>
+                <div class="score col-2 col-offset-1">
+                    <div class="user-points" id="user-points">0</div>
+                    <div>:</div> 
+                    <div class="cpu-points" id="cpu-points">0</div>
+                </div>
+                <div class="cpu-data col-2 col-offset-1">
+                    <div class="name" id="cpu-name">CPU</div>
+                    <div class="choice" id="cpu-choice"></div>
+                </div>
             </div>
         </div>
-        <div class="comment">
-            <p id="comment"></p>
+        <div class="row">
+            <div class="comment col-6 col-offset-2">
+                <p id="comment">Throw!</p>
+            </div>
+        </div>    
+        <div class="row">
+            <div class="buttons" id="buttons">
+                <div class="btn btn-purple col-2 col-offset-1" id="rock"><i class="fa fa-hand-rock-o"></i></div>
+                <div class="btn btn-yellow col-2 col-offset-1" id="paper"><i class="fa fa-hand-paper-o"></i></div>
+                <div class="btn btn-blue col-2 col-offset-1" id="scissors"><i class="fa fa-hand-scissors-o"></i></div>
+                <div class="btn btn-yellow btn-play col-6 col-offset-2" id="btn-play-again">Play again!</div>
+            </div>
         </div>
-        <div class="buttons" id="buttons">
-            <div class="btn btn-purple" id="rock"><i class="fa fa-hand-rock-o"></i></div>
-            <div class="btn btn-yellow" id="paper"><i class="fa fa-hand-paper-o"></i></div>
-            <div class="btn btn-blue" id="scissors"><i class="fa fa-hand-scissors-o"></i></div>
-            <div class="btn btn-yellow btn-play" id="play-again">Play again!</div>
-        </div>
-    </div> 
+    </div>
 
     <script src="js/script.js"></script>    
 </body>

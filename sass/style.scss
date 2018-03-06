@@ -1,41 +1,77 @@
 $grey: #bdc3c7;
 $green: #1abc9c;
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: #34495e;
-    margin: 0;
+    text-align: center;
+}
+
+.col-1 {width: 10%;}
+.col-2 {width: 20%;}
+.col-3 {width: 30%;}
+.col-4 {width: 40%;}
+.col-5 {width: 50%;}
+.col-6 {width: 60%;}
+.col-7 {width: 70%;}
+.col-8 {width: 80%;}
+.col-9 {width: 90%;}
+.col-10 {width: 100%;}
+
+.col-offset-1 {margin-left: 10%;}  
+.col-offset-2 {margin-left: 20%;}
+.col-offset-3 {margin-left: 30%;}
+.col-offset-4 {margin-left: 40%;}
+.col-offset-5 {margin-left: 50%;}
+.col-offset-6 {margin-left: 60%;}
+.col-offset-7 {margin-left: 70%;}
+.col-offset-8 {margin-left: 80%;}
+.col-offset-9 {margin-left: 90%;}
+
+[class*='col-'] {
+	float: left;
+	min-height: 1px;
+}
+
+.row {
+    &:before, &:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
 }
 
 .container {
     width: 100%;
-    height: calc(100vh - 100px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 50px 0;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
     font-family: Acme, sans-serif;
     color: $grey;
 }
 
 .data {
-    display: flex;
-    width: 80%;
-    align-items: center;
-    justify-content: center;
+    padding: 12vh 0;
     [class*=-data] {
-        margin: 0 15%;
         font-size: 2.5em;
-        text-align: center;
         .name {
+            font-size: 2.5rem;
             text-transform: uppercase;
             color: $green;
             white-space: nowrap; 
         }
+        .choice {
+            font-size: 1.8rem;
+        }
     }
     .score {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         background: $grey;
         color: black;
         font-size: 3em;
@@ -44,29 +80,23 @@ body {
         padding: 20px;
         border: solid black 3px;
         min-width: 150px;
-        [class*=points] {
-            display: flex;
+        > div {
+            display: inline-block;
         }
     }
 
 }
 
 .comment {
-    display: flex;
-    width: 80%;
-    align-items: center;
-    justify-content: center;
     p {
-        font-size: 2em;
+        font-size: 3rem;
         color: $green;
     }
 }
 
 .buttons {
-    display: flex;
-    width: 80%;
-    align-items: center;
-    justify-content: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 
 .btn {
@@ -74,19 +104,13 @@ body {
     border-radius: 5%;
     border: 2px solid;
     cursor: pointer;
-    margin: 4px 20px;
-    padding: 20px 40px;
+    padding: 10px;
     font-family: Acme, sans-serif;
     font-size: 7em;
-    min-width: 150px;
-    min-height: 100px;
+    min-width: 220px;
     transition: .4s;
     background-position: 100% 0;
-    background-size: 600%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    background-size: 800%;
     &:hover {
         color: white;
         background-position: 0 100%;
@@ -111,6 +135,21 @@ body {
     display: none;
 }
 
+.main-game {
+    display: none;
+}
+
+.start-game {
+    padding-top: 15vh;
+    .btn {
+        font-size: 6rem;
+    }
+    i {
+        padding-top: 10vh;
+        font-size: 15em;
+        color: blueviolet;
+    }
+}
 
 
 
