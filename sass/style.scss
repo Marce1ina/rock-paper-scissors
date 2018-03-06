@@ -1,5 +1,8 @@
 $grey: #bdc3c7;
 $green: #1abc9c;
+$purple: #8e44ad;
+$yellow: #f1c40f;
+$blue: #3498db;
 
 @mixin generate-grid($columns) {
     @for $i from 1 through $columns {
@@ -101,19 +104,19 @@ body {
     }
 }
 .btn-purple {
-    border-color: #8e44ad;
-    color: #8e44ad;
-    background-image: linear-gradient(90deg, #8e44ad 50%, transparent 50%);
+    border-color: $purple;
+    color: $purple;
+    background-image: linear-gradient(90deg, $purple 50%, transparent 50%);
 }
 .btn-yellow {
-    border-color: #f1c40f;
-    color: #f1c40f;
-    background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    border-color: $yellow;
+    color: $yellow;
+    background-image: linear-gradient(45deg, $yellow 50%, transparent 50%);
 }
 .btn-blue {
-    border-color: #3498db;
-    color: #3498db;
-    background-image: linear-gradient(135deg, #3498db 50%, transparent 50%);
+    border-color: $blue;
+    color: $blue;
+    background-image: linear-gradient(135deg, $blue 50%, transparent 50%);
 }
 .btn-play {
     display: none;
@@ -129,7 +132,7 @@ body {
     i {
         padding-top: 10vh;
         font-size: 15em;
-        color: blueviolet;
+        color: $blue;
     }
 }
 
