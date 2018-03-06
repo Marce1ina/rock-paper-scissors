@@ -18,14 +18,14 @@ body { background: #34495e; margin: 0; }
 
 .buttons { display: -ms-flexbox; display: flex; width: 80%; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; }
 
-.buttons .btn { background-color: inherit; border-radius: 5%; border: 2px solid; cursor: pointer; margin: 4px 20px; padding: 20px 40px; font-family: Acme, sans-serif; font-size: 7em; min-width: 150px; min-height: 100px; transition: .4s; background-position: 100% 0; background-size: 600%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.btn { background-color: inherit; border-radius: 5%; border: 2px solid; cursor: pointer; margin: 4px 20px; padding: 20px 40px; font-family: Acme, sans-serif; font-size: 7em; min-width: 150px; min-height: 100px; transition: .4s; background-position: 100% 0; background-size: 600%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.buttons .btn:hover { color: white; background-position: 0 100%; }
+.btn:hover { color: white; background-position: 0 100%; }
 
-.buttons .btn-purple { border-color: #8e44ad; color: #8e44ad; background-image: linear-gradient(90deg, #8e44ad 50%, transparent 50%); }
+.btn-purple { border-color: #8e44ad; color: #8e44ad; background-image: linear-gradient(90deg, #8e44ad 50%, transparent 50%); }
 
-.buttons .btn-yellow { border-color: #f1c40f; color: #f1c40f; background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%); }
+.btn-yellow { border-color: #f1c40f; color: #f1c40f; background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%); }
 
-.buttons .btn-blue { border-color: #3498db; color: #3498db; background-image: linear-gradient(135deg, #3498db 50%, transparent 50%); }
+.btn-blue { border-color: #3498db; color: #3498db; background-image: linear-gradient(135deg, #3498db 50%, transparent 50%); }
 
-.buttons .btn-play { display: none; }
+.btn-play { display: none; }
