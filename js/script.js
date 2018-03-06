@@ -1,7 +1,7 @@
 let name = prompt("Hi! Enter your name here:");
 
 let user = document.getElementById("user-name");
-if (name !== "" && name !== null) {user.innerText = name};
+if (name !== "", null) {user.innerText = name};
 
 document.getElementById("paper").addEventListener("click", playPaper);
 document.getElementById("rock").addEventListener("click", playRock);
