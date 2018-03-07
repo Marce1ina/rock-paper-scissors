@@ -108,7 +108,16 @@ function result() {
         resultLook();
     };
     function resultLook () {
-        comment.style.fontSize = "4em";
+        function biggerCommentAndName(width) {
+            if (width.matches) {
+                comment.style.fontSize = "3.8em";
+                winner.style.fontSize = '2.8rem';
+            }
+        }        
+        var width = window.matchMedia("(min-width: 800px)");
+        biggerCommentAndName(width);
+        width.addListener(biggerCommentAndName);
+
         paperButton.style.display = "none";
         scissorsButton.style.display = "none";
         rockButton.style.display = "none";
@@ -131,13 +140,23 @@ function clear() {
 };
 
 function reset() {
+    function smallerCommentAndName(width) {
+        if (width.matches) {
+            comment.style.fontSize = "3rem";
+            winner.style.fontSize = '42px';
+        }
+    }        
+    var width = window.matchMedia("(min-width: 800px)");
+    smallerCommentAndName(width);
+    width.addListener(smallerCommentAndName);
+
     clear();
     userPoints = 0;
     cpuPoints = 0;
     document.getElementById("user-points").innerHTML = userPoints;
     document.getElementById("cpu-points").innerHTML = cpuPoints;
-    // user.style.fontSize = '2.5rem';
-    // cpu.style.fontSize = '2.5rem';
+    user.style.fontSize = '2.5rem';
+    cpu.style.fontSize = '2.5rem';
     userChoiceText.innerHTML = '';
     cpuChoiceText.innerHTML = '';
     comment.innerHTML = "Throw!";
