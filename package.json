@@ -29,5 +29,8 @@
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
     "onchange": "^3.3.0"
+  },
+  "dependencies": {
+    "alertify.js": "^1.0.12"
   }
 }

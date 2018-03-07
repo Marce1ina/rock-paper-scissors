@@ -50,7 +50,7 @@ body {
 }
 .data {
     padding: 12vh 0;
-    @media (max-width: 560px) {
+    @media #{$phone} {
         padding: 6vh 0;
         width: 100%;
         margin: 0 auto;
@@ -61,10 +61,10 @@ body {
             text-transform: uppercase;
             color: $green;
             white-space: nowrap; 
+            display: flex;
+            justify-content: center;
             @media #{$tablet} {
                 font-size: 32px;
-                display: flex;
-                justify-content: center;
             }  
         }
         .choice {
@@ -75,7 +75,7 @@ body {
                 justify-content: center;
             }  
         }
-        @media (max-width: 560px)  {
+        @media #{$phone}  {
             float: none;
             margin: 0 auto;
         } 
@@ -91,7 +91,7 @@ body {
         padding: 20px;
         border: solid black 3px;
         min-width: 150px;
-        @media (max-width: 560px)  {
+        @media #{$phone}  {
             font-size: 2.5em;
             padding: 10px;
             display: block;
@@ -100,18 +100,18 @@ body {
         } 
         > div {
             display: inline-block;
-            @media (max-width: 560px) {
+            @media #{$phone} {
                display: block;
             } 
         }
         div:nth-child(2) {
-            @media (max-width: 560px) {
+            @media #{$phone} {
                 display: none;
              } 
         }
     }
     .flex-direction {    
-        @media (max-width: 560px) {
+        @media #{$phone} {
             display: flex;
             flex-direction: column-reverse;
         }
@@ -126,7 +126,7 @@ body {
 .buttons {
     padding-top: 10vh;
     padding-bottom: 10vh;
-    @media (max-width: 560px) {
+    @media #{$phone} {
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
