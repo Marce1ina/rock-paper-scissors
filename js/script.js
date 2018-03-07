@@ -106,9 +106,8 @@ function result() {
         winner = cpu;
         comment.innerHTML = "CPU is the winner!";
         resultLook();
-    }
+    };
     function resultLook () {
-        winner.style.fontSize = '3.5rem';
         comment.style.fontSize = "4em";
         paperButton.style.display = "none";
         scissorsButton.style.display = "none";
@@ -118,7 +117,7 @@ function result() {
         userChoiceText.innerHTML = '';
         cpuChoiceText.innerHTML = '';
         flashingName(winner);
-    }
+    };
 };
 
 function flashingName(winner) {
@@ -137,8 +136,8 @@ function reset() {
     cpuPoints = 0;
     document.getElementById("user-points").innerHTML = userPoints;
     document.getElementById("cpu-points").innerHTML = cpuPoints;
-    user.style.fontSize = '2.5rem';
-    cpu.style.fontSize = '2.5rem';
+    // user.style.fontSize = '2.5rem';
+    // cpu.style.fontSize = '2.5rem';
     userChoiceText.innerHTML = '';
     cpuChoiceText.innerHTML = '';
     comment.innerHTML = "Throw!";
