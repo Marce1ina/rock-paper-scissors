@@ -3,8 +3,9 @@ $green: #1abc9c;
 $purple: #8e44ad;
 $yellow: #f1c40f;
 $blue: #3498db;
-$phone: "(max-width: 560px)";
-$tablet: "(max-width: 740px)";
+$m: "(max-width: 740px)";
+$s: "(max-width: 560px)";
+$xs: "(max-width: 350px)";
 
 @mixin generate-grid($columns) {
     @for $i from 1 through $columns {
@@ -41,6 +42,9 @@ body {
     text-align: center;
 }
 .container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
     margin: 0 auto;
@@ -49,12 +53,6 @@ body {
     color: $grey;
 }
 .data {
-    padding: 12vh 0;
-    @media #{$phone} {
-        padding: 6vh 0;
-        width: 100%;
-        margin: 0 auto;
-    } 
     [class*="-data"] {
         .name {
             font-size: 42px;
@@ -63,19 +61,26 @@ body {
             white-space: nowrap; 
             display: flex;
             justify-content: center;
-            @media #{$tablet} {
+            @media #{$m} {
                 font-size: 32px;
             }  
+            @media #{$xs} {
+                font-size: 28px;
+            } 
         }
         .choice {
             font-size: 34px;
-            @media #{$tablet} {
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            @media #{$m} {
                 font-size: 22px;
-                display: flex;
-                justify-content: center;
-            }  
+            }
+            @media #{$xs} {
+                font-size: 20px;
+            } 
         }
-        @media #{$phone}  {
+        @media #{$m}  {
             float: none;
             margin: 0 auto;
         } 
@@ -91,27 +96,32 @@ body {
         padding: 20px;
         border: solid black 3px;
         min-width: 150px;
-        @media #{$phone}  {
+        @media #{$m}  {
+            min-width: 130px;
             font-size: 2.5em;
             padding: 10px;
             display: block;
             float: none;
-            margin: 10px auto;
+            margin: 0 auto;
+        } 
+        @media #{$xs} {
+            font-size: 2em;
+            padding: 5px;
         } 
         > div {
             display: inline-block;
-            @media #{$phone} {
+            @media #{$m} {
                display: block;
             } 
         }
         div:nth-child(2) {
-            @media #{$phone} {
+            @media #{$m} {
                 display: none;
              } 
         }
     }
     .flex-direction {    
-        @media #{$phone} {
+        @media #{$m} {
             display: flex;
             flex-direction: column-reverse;
         }
@@ -121,14 +131,9 @@ body {
     p {
         font-size: 3rem;
         color: $green;
-    }
-}
-.buttons {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    @media #{$phone} {
-        padding-top: 5vh;
-        padding-bottom: 5vh;
+        @media #{$xs} {
+            font-size: 2.5rem;
+        } 
     }
 }
 .btn {
@@ -165,15 +170,18 @@ body {
 .btn-play {
     display: none;
     > p {
-        font-size: 100px;
-        @media (max-width: 780px) {
-            font-size: 80px;
+        font-size: 95px;
+        @media #{$m} {
+            font-size: 72px;
         }  
-        @media (max-width: 630px) {
+        @media #{$s} {
             font-size: 60px;
         }  
         @media (max-width: 470px) {
-            font-size: 46px;
+            font-size: 42px;
+        } 
+        @media #{$xs} {
+            font-size: 34px;
         } 
     }
 }
@@ -181,19 +189,12 @@ body {
     display: none;
 }
 .start-game {
-    padding-top: 15vh;
-    @media #{$tablet} {
-        padding-top: 20vh;
-    }  
-    @media #{$phone} {
-        padding-top: 28vh;
-    }  
     .btn {
         font-size: 6rem;
-        @media #{$tablet} {
+        @media #{$m} {
             font-size: 4rem;
         }  
-        @media #{$phone} {
+        @media #{$s} {
             font-size: 3rem;
         }  
     }
@@ -201,30 +202,27 @@ body {
         padding-top: 10vh;
         font-size: 15em;
         color: $blue;
-        @media #{$tablet} {
+        @media #{$m} {
             font-size: 10em;
         }  
-        @media #{$phone} {
+        @media #{$s} {
             font-size: 7em;
         }  
     }
 }
 .btn.col-2 {
-    @media (max-width: 700px) {
+    @media #{$m} {
         margin-left: 5%;
         width: calc(80%/3);
         padding: 5px;
+        font-size: 5rem;
     }
-    @media (max-width: 350px) {
-        margin: 0 10% 10px;
+    @media #{$xs} {
+        margin: 3% 10%;
         width: 80%;
         padding: 0;
-    }  
-    i {
-        @media (max-width: 700px) {
-            font-size: 5rem;
-        } 
-    }
+        font-size: 3rem;
+    } 
 }
 
 

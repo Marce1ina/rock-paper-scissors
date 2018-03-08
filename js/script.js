@@ -31,7 +31,7 @@ function newGame() {
     let name = prompt("Hi! Enter your name here:");
     if ((name !== '') && (name !== null)) {user.innerText = name};
     document.getElementById("start-game").style.display = "none";
-    document.getElementById("main-game").style.display = "block";
+    document.getElementById("main-game").style.display = "flex";
 }
 
 paperButton.addEventListener("click", playPaper);
@@ -108,6 +108,7 @@ function result() {
         resultLook();
     };
     function resultLook () {
+
         function biggerCommentAndName(width) {
             if (width.matches) {
                 comment.style.fontSize = "3.8em";
@@ -140,23 +141,33 @@ function clear() {
 };
 
 function reset() {
-    function smallerCommentAndName(width) {
-        if (width.matches) {
+    
+    function mediumFontSizes(widthM) {
+        if (widthM.matches) {
             comment.style.fontSize = "3rem";
             winner.style.fontSize = '42px';
         }
     }        
-    var width = window.matchMedia("(min-width: 800px)");
-    smallerCommentAndName(width);
-    width.addListener(smallerCommentAndName);
+    var widthM = window.matchMedia("(min-width: 740px)");
+    mediumFontSizes(widthM);
+    widthM.addListener(mediumFontSizes);
+
+    function smallFontSizes(widthXS) {
+        if (widthXS.matches) {
+            user.style.fontSize = '28px';
+            cpu.style.fontSize = '28px';
+            comment.style.fontSize = "2.5rem";
+        }
+    }        
+    var widthXS = window.matchMedia("(max-width: 350px)");
+    smallFontSizes(widthXS);
+    widthXS.addListener(smallFontSizes);
 
     clear();
     userPoints = 0;
     cpuPoints = 0;
     document.getElementById("user-points").innerHTML = userPoints;
     document.getElementById("cpu-points").innerHTML = cpuPoints;
-    user.style.fontSize = '2.5rem';
-    cpu.style.fontSize = '2.5rem';
     userChoiceText.innerHTML = '';
     cpuChoiceText.innerHTML = '';
     comment.innerHTML = "Throw!";
@@ -164,7 +175,6 @@ function reset() {
     scissorsButton.style.display = "block";
     rockButton.style.display = "block";
     document.getElementById("btn-play-again").style.display = "none";
-    comment.style.fontSize = "3rem";
     user.style.color = '#1abc9c';
     cpu.style.color = '#1abc9c';
 };
