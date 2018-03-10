@@ -28,8 +28,10 @@ for (i=1; i<3; i++) {
 document.getElementById("btn-new-game").addEventListener("click", newGame);
 
 function newGame() {
-    let name = prompt("Hi! Enter your name here:");
-    if ((name !== '') && (name !== null)) {user.innerText = name};
+    alertify.prompt("Enter your name:", function (e, str) {
+        if (e && str !== '' && str !== null) {
+            user.innerText = str;}
+        }, "User");
     document.getElementById("start-game").style.display = "none";
     document.getElementById("main-game").style.display = "flex";
 }

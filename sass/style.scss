@@ -233,4 +233,21 @@ body {
     } 
 }
 
+.alertify-button-cancel,
+.alertify-button-cancel:hover,
+.alertify-button-cancel:focus {
+    background-color: $green;
+    border: 1px solid #16a588;
+    font-weight: initial;
+}
+.alertify-button-ok,
+.alertify-button-ok:hover,
+.alertify-button-ok:focus {
+    background-color: $yellow;
+    border: 1px solid #d6ae0d;
+    font-weight: initial;
 
+}
+.alertify-text {
+    margin-top: 5px;
+}
